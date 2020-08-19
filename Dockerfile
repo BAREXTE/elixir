@@ -20,8 +20,8 @@ ENV HOME=/home/steam
 # Install SteamCMD
 RUN \
   mkdir ~/unturned-server && \
-  mkdir ~/steam && \
-  cd ~/steam && \
+  mkdir ~/Steam && \
+  cd ~/Steam && \
   curl -sqL "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz" | tar zxvf -
  
 # Install SE Server
