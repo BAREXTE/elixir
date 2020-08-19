@@ -25,9 +25,9 @@ RUN \
   curl -sqL "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz" | tar zxvf -
  
 # Install SE Server
-RUN \
-  cd ~/steam && \
-  ./steamcmd.sh +login anonymous +force_install_dir "/home/steam/unturned-server/" +app_update 1110390 +quit
+#RUN \
+#  cd ~/steam && \
+#  ./steamcmd.sh +login anonymous +force_install_dir "/home/steam/unturned-server/" +app_update 1110390 +quit
 
 # switch user
 USER root
