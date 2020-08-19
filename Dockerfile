@@ -1,6 +1,6 @@
   
 # Parent image
-FROM ubuntu
+FROM ubuntu:bionic
 
 MAINTAINER BAREXTE <barexte@gmail.com>
 
@@ -26,7 +26,7 @@ RUN \
  
 # Install SE Server
 #RUN \
-#  cd ~/steam && \
+#  cd ~/Steam && \
 #  ./steamcmd.sh +login anonymous +force_install_dir "/home/steam/unturned-server/" +app_update 1110390 +quit
 
 # switch user
