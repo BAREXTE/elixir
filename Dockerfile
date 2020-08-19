@@ -1,6 +1,6 @@
   
 # Parent image
-FROM ubuntu:bionic
+FROM mcr.microsoft.com/dotnet/core/runtime:3.1-bionic
 
 MAINTAINER BAREXTE <barexte@gmail.com>
 
