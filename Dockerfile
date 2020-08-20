@@ -34,7 +34,8 @@ RUN \
   
 # Install Elixir
 RUN \
-  mkdir /elixir/world
+  mkdir /elixir/World && \
+  mkdir /elixir/Elixir.Interface
 
 # switch user
 USER root
