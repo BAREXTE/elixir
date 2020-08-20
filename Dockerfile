@@ -10,7 +10,9 @@ RUN \
   apt update && \
   apt upgrade -y && \
   apt install lib32gcc1 curl -y && \
-  useradd -m elixir 
+  useradd -m elixir && \
+  mkdir /elixir
+  chown elixir:elixir /elixir
   
 # Configure environment
 USER elixir
@@ -32,7 +34,7 @@ RUN \
   
 # Install Elixir
 RUN \
-  mkdir /elixir
+  mkdir /elixir/world
 
 # switch user
 USER root
