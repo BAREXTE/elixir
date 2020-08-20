@@ -30,7 +30,7 @@ RUN \
 RUN \
   mkdir ~/unturned-server && \
   cd ~/steamcmd && \
-  ./steamcmd.sh +login anonymous +force_install_dir "~/unturned-server/" +app_update 1110390 +quit
+  ./steamcmd.sh +login anonymous +force_install_dir "/home/elixir/unturned-server/" +app_update 1110390 +quit
   
 # Install Elixir
 RUN \
