@@ -11,7 +11,7 @@ RUN \
   apt upgrade -y && \
   apt install lib32gcc1 curl -y && \
   useradd -m elixir && \
-  mkdir /elixir
+  mkdir /elixir && \
   chown elixir:elixir /elixir
   
 # Configure environment
