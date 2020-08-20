@@ -10,24 +10,29 @@ RUN \
   apt update && \
   apt upgrade -y && \
   apt install lib32gcc1 curl -y && \
-  useradd -m steam 
+  useradd -m elixir 
   
 # Configure environment
-USER steam
-WORKDIR /home/steam
-ENV HOME=/home/steam
+USER elixir
+WORKDIR /home/elixir
+ENV HOME=/home/elixir
 
 # Install SteamCMD
 RUN \
-  mkdir ~/unturned-server && \
-  mkdir ~/Steam && \
-  cd ~/Steam && \
-  curl -sqL "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz" | tar zxvf -
+  mkdir ~/steamcmd && \
+  cd ~/steamcmd && \
+  curl -sqL "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz" | tar zxvf - && \
+  ./steamcmd.sh +quit
  
-# Install Server
+# Install Unturned Dedicated Server
 RUN \
-  cd ~/Steam && \
-  ./steamcmd.sh +login anonymous +force_install_dir "/home/steam/unturned-server/" +app_update 1110390 +quit
+  mkdir ~/unturned-server && \
+  cd ~/steamcmd && \
+  ./steamcmd.sh +login anonymous +force_install_dir "~/unturned-server/" +app_update 1110390 +quit
+  
+# Install Elixir
+RUN \
+  mkdir /elixir
 
 # switch user
 USER root
