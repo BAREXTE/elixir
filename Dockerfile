@@ -37,9 +37,7 @@ RUN \
   mkdir /elixir/World && \
   mkdir /elixir/Elixir.Interface
 
-COPY ./Elixir.Core.dll /elixir/
-COPY ./Elixir.Platform.dll /elixir/
-COPY ./Elixir.Server.dll /elixir/
+COPY ./tmp /elixir/
 
 # Entrypoint
 ENTRYPOINT ["dotnet", "Elixir.Server.dll"]
