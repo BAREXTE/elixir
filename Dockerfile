@@ -16,7 +16,7 @@ RUN \
   
 # Configure environment
 USER elixir
-WORKDIR /home/elixir
+WORKDIR /elixir
 ENV HOME=/home/elixir
 
 # Install SteamCMD
@@ -37,5 +37,9 @@ RUN \
   mkdir /elixir/World && \
   mkdir /elixir/Elixir.Interface
 
-# switch user
-USER root
+COPY ./Elixir.Core.dll /elixir/
+COPY ./Elixir.Platform.dll /elixir/
+COPY ./Elixir.Server.dll /elixir/
+
+# Entrypoint
+ENTRYPOINT ["dotnet", "Elixir.Server.dll"]
