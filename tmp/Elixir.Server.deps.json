@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Elixir.Server/1.0.0": {
+        "dependencies": {
+          "Elixir.Core": "1.0.0",
+          "Elixir.Platform": "1.0.0"
+        },
+        "runtime": {
+          "Elixir.Server.dll": {}
+        }
+      },
+      "Elixir.Core/1.0.0": {
+        "dependencies": {
+          "Elixir.Platform": "1.0.0"
+        },
+        "runtime": {
+          "Elixir.Core.dll": {}
+        }
+      },
+      "Elixir.Platform/1.0.0": {
+        "runtime": {
+          "Elixir.Platform.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Elixir.Server/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Elixir.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Elixir.Platform/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
